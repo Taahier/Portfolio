@@ -1,136 +1,200 @@
-/* General Styles */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #1a1a1a;
-    color: #fff;
     margin: 0;
-    padding: 0;
+    font-family: Arial, sans-serif;
+    color: #333;
     line-height: 1.6;
-}
-
-h1, h2, h3, h4 {
-    color: #fff;
+    background-color: #f9f9f9;
 }
 
 section {
-    padding: 40px;
-    margin: 20px 0;
-    background-color: #2a2a2a;
-    border-radius: 10px;
-}
-
-/* Intro Section */
-.intro {
-    text-align: center;
-    background: #333 url('skyline.jpg') no-repeat center/cover; /* Replace with your skyline image */
     padding: 60px 20px;
+    text-align: center;
 }
 
-.intro h1 {
+h1 {
     font-size: 2.5em;
-    margin-bottom: 10px;
-}
-
-.intro p {
-    font-size: 1.2em;
     margin-bottom: 20px;
 }
 
-.buttons .btn {
-    display: inline-block;
+h2 {
+    font-size: 2em;
+    margin-bottom: 30px;
+}
+
+h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+p {
+    margin-bottom: 15px;
+}
+
+/* Hero Section */
+.hero {
+    background-color: #333;
+    color: white;
+    background-image: url('https://freesvg.org/img/city-skyline-vector-drawing.png');
+    background-size: cover;
+    background-position: center;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.hero-buttons .btn {
+    margin: 10px;
     padding: 10px 20px;
-    margin: 0 10px;
-    background-color: #4a4a4a;
-    color: #fff;
+    background-color: #555;
+    color: white;
     text-decoration: none;
     border-radius: 5px;
-    transition: background-color 0.3s; /* Smooth hover effect */
 }
 
-.buttons .btn:hover {
-    background-color: #5a5a5a; /* Darker shade on hover */
+.hero-buttons .btn:hover {
+    background-color: #777;
 }
 
-/* Bio Section */
-.bio-content, .cert {
-    margin: 10px 0;
-    padding: 15px;
-    background-color: #3a3a3a;
-    border-radius: 5px;
+/* About Section */
+.about {
+    background-color: #fff;
+    padding: 40px;
 }
 
-/* Cards (Strengths, Projects, Roles) */
-.cards {
+.about-content {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.about-text, .about-cert {
+    flex: 1;
+    text-align: left;
+}
+
+/* Core Strengths Section */
+.core-strengths {
+    background-color: #fff;
+}
+
+.strengths-grid, .projects-grid, .education-grid, .certifications-grid, .skills-grid, .ready-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .card {
-    background-color: #3a3a3a;
-    padding: 15px;
-    border-radius: 5px;
+    background-color: #f5f5f5;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    text-align: left;
+}
+
+.card img {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 10px;
 }
 
 /* Experience Section */
-.exp-card ul {
-    list-style-type: none;
-    padding-left: 0;
+.experience {
+    background-color: #fff;
 }
 
-.exp-card li {
-    margin: 10px 0;
+.timeline {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: left;
 }
 
-/* Skills Section */
-.skills-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 20px;
-}
-
-.skill-group {
-    background-color: #3a3a3a;
+.timeline-item {
+    margin-bottom: 20px;
     padding: 15px;
+    background-color: #f5f5f5;
     border-radius: 5px;
 }
 
-.skill-group ul {
+.timeline-item ul {
     list-style-type: none;
     padding-left: 0;
 }
 
-.skill-group li {
-    margin: 5px 0;
+.timeline-item ul li {
+    margin-bottom: 10px;
 }
 
-/* Contact Section */
-.contact-info div {
-    margin: 10px 0;
+/* Projects Section */
+.projects {
+    background-color: #fff;
 }
 
-.contact-info a {
-    color: #1e90ff;
-    text-decoration: none;
+/* Education Section */
+.education {
+    background-color: #fff;
 }
 
-.contact-info a:hover {
-    text-decoration: underline;
+.education-content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+/* Skills Section */
+.skills {
+    background-color: #333;
+    color: white;
+}
+
+/* Ready Section */
+.ready {
+    background-color: #fff;
+}
+
+/* Connect Section */
+.connect {
+    background-color: #fff;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.contact-item img {
+    width: 20px;
+    height: 20px;
 }
 
 /* Responsive Design */
-@media (max-width: 600px) {
-    .cards, .skills-grid {
-        grid-template-columns: 1fr;
+@media (max-width: 768px) {
+    .about-content {
+        flex-direction: column;
     }
-    .intro {
-        padding: 40px 10px;
+    .hero {
+        height: 60vh;
     }
-    .buttons .btn {
-        display: block;
-        margin: 10px 0;
+    h1 {
+        font-size: 2em;
     }
-    section {
-        padding: 20px;
+    h2 {
+        font-size: 1.5em;
     }
 }

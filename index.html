@@ -4,214 +4,392 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Taahier Mendubek - Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f8f9fa;
+            color: #333;
+            font-family: 'Arial', sans-serif;
+        }
+        .hero {
+            background: url('https://via.placeholder.com/1920x1080?text=City+Skyline+Light') no-repeat center center;
+            background-size: cover;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: #fff;
+            padding: 20px;
+        }
+        .hero h1 {
+            font-size: 3.5rem;
+            font-weight: bold;
+        }
+        .hero p {
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+        }
+        .card {
+            background-color: #fff;
+            border: none;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+        .card-img-top {
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            height: 200px;
+            object-fit: cover;
+        }
+        .section-title {
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            color: #333;
+        }
+        .btn-custom {
+            background-color: #6c757d;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            transition: background-color 0.3s ease;
+        }
+        .btn-custom:hover {
+            background-color: #5a6268;
+        }
+        .about-img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+        .timeline-item {
+            position: relative;
+            padding-left: 20px;
+            margin-bottom: 20px;
+        }
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 2px;
+            background-color: #dee2e6;
+        }
+        .timeline-dot {
+            position: absolute;
+            left: -6px;
+            top: 5px;
+            width: 12px;
+            height: 12px;
+            background-color: #6c757d;
+            border-radius: 50%;
+        }
+        .contact-icon {
+            width: 24px;
+            height: 24px;
+            margin-right: 10px;
+        }
+    </style>
 </head>
 <body>
     <!-- Hero Section -->
     <section class="hero">
         <h1>Unlock Your Digital Future</h1>
         <p>Building secure, high-performance software. Defending it with precision.</p>
-        <div class="hero-buttons">
-            <a href="https://www.linkedin.com/in/taahier" class="btn">Connect on LinkedIn</a>
-            <a href="mailto:taahier75@gmail.com" class="btn">Email Me</a>
-            <a href="#resume" class="btn">Download Resume</a>
+        <div class="d-flex gap-3">
+            <a href="https://www.linkedin.com/in/taahier" class="btn btn-custom">Connect on LinkedIn</a>
+            <a href="mailto:taahiermhd07@gmail.com" class="btn btn-custom">Email Me</a>
+            <a href="#resume" class="btn btn-custom">Download Resume</a>
         </div>
     </section>
 
     <!-- About Section -->
-    <section class="about">
-        <h1>Taahier Mendubek</h1>
-        <div class="about-content">
-            <div class="about-text">
-                <p>As a Software Developer, Backend Engineer, and Cybersecurity Specialist, I build functional and resilient digital solutions.</p>
-                <p>My expertise includes Java backend development, SQL databases, API integration, and comprehensive cybersecurity testing.</p>
-            </div>
-            <div class="about-cert">
-                <p>I am an (ISC)2 Certified in Cybersecurity (CC) professional, actively advancing my skills in AWS and Microsoft Azure.</p>
-                <p>I design and deploy secure, scalable cloud systems, integrating software engineering, cloud, and security to deliver real-world applications.</p>
+    <section class="py-5">
+        <div class="container">
+            <h2 class="section-title text-center">Taahier Mendubek</h2>
+            <div class="row justify-content-center">
+                <div class="col-md-6">
+                    <div class="card mb-4">
+                        <div class="card-body text-center">
+                            <img src="https://via.placeholder.com/100?text=Profile" alt="Profile" class="about-img mb-3">
+                            <p>As a Software Developer, Backend Engineer, and Cybersecurity Specialist, I build functional and resilient digital solutions.</p>
+                            <p>My expertise includes Java backend development, SQL databases, API integration, and comprehensive cybersecurity testing.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card mb-4">
+                        <div class="card-body text-center">
+                            <img src="https://via.placeholder.com/100?text=Cert" alt="Certification" class="about-img mb-3">
+                            <p>I am an (ISC)2 Certified in Cybersecurity (CC) professional, actively advancing my skills in AWS and Microsoft Azure.</p>
+                            <p>I design and deploy secure, scalable cloud systems, integrating software engineering, cloud, and security to deliver real-world applications.</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- Core Strengths Section -->
-    <section class="core-strengths">
-        <h2>Core Strengths</h2>
-        <div class="strengths-grid">
-            <div class="card">
-                <img src="https://image.flaticon.com/icons/svg/1167/11676402.svg" alt="Backend Icon">
-                <h3>Backend Development</h3>
-                <p>Building robust system architectures leveraging Java, MySQL, J2EE, and Object-Oriented Programming (OOP) principles.</p>
-            </div>
-            <div class="card">
-                <img src="https://image.flaticon.com/icons/svg/3222/3222791.svg" alt="Cloud Icon">
-                <h3>Cloud Platforms</h3>
-                <p>Designing and deploying scalable, secure solutions on AWS, with ongoing expertise development in Microsoft Azure.</p>
-            </div>
-            <div class="card">
-                <img src="https://image.flaticon.com/icons/svg/746/74662.svg" alt="Shield Icon">
-                <h3>Cybersecurity</h3>
-                <p>Utilizing Kali Linux, SIEM for comprehensive penetration testing and proactive defense strategies.</p>
-            </div>
-            <div class="card">
-                <img src="https://image.flaticon.com/icons/svg/891/891399.svg" alt="Lock Icon">
-                <h3>Secure Application Design</h3>
-                <p>Implementing secure coding practices, API integration, and system optimization for resilient and high-performance applications.</p>
+    <section class="py-5 bg-light">
+        <div class="container">
+            <h2 class="section-title text-center">Core Strengths</h2>
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-3">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <img src="https://via.placeholder.com/50?text=Backend" alt="Backend" class="card-img-top mb-3">
+                            <h5 class="card-title">Backend Development</h5>
+                            <p class="card-text">Building robust system architectures leveraging Java, MySQL, J2EE, and Object-Oriented Programming (OOP) principles.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <img src="https://via.placeholder.com/50?text=Cloud" alt="Cloud" class="card-img-top mb-3">
+                            <h5 class="card-title">Cloud Platforms</h5>
+                            <p class="card-text">Designing and deploying scalable, secure solutions on AWS, with ongoing expertise development in Microsoft Azure.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <img src="https://via.placeholder.com/50?text=Cyber" alt="Cybersecurity" class="card-img-top mb-3">
+                            <h5 class="card-title">Cybersecurity</h5>
+                            <p class="card-text">Utilizing Kali Linux, SIEM for comprehensive penetration testing and proactive defense strategies.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <img src="https://via.placeholder.com/50?text=Secure" alt="Secure Design" class="card-img-top mb-3">
+                            <h5 class="card-title">Secure Application Design</h5>
+                            <p class="card-text">Implementing secure coding practices, API integration, and system optimization for resilient and high-performance applications.</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- Professional Experience Section -->
-    <section class="experience">
-        <h2>Professional Experience</h2>
-        <div class="timeline">
-            <div class="timeline-item">
-                <h3>Languify : Java Internship</h3>
-                <p><em>December 2022 - February 2023 (3 months)</em></p>
-                <ul>
-                    <li>Developed a robust console-based banking management system, leveraging core Java principles for backend operations and delivering a secure, efficient user experience.</li>
-                    <li>Designed and implemented comprehensive account management functionalities, including user authentication, balance inquiries, and detailed transaction handling (deposits, withdrawals, transfers).</li>
-                    <li>Integrated SQL databases (e.g., MySQL) for persistent data storage, expertly managing customer accounts and transaction records while ensuring data integrity and consistency.</li>
-                    <li>Enhanced system reliability by 40% through meticulous code refactoring, adhering to Object-Oriented Programming (OOP) best practices and significantly improving code maintainability.</li>
-                    <li>Reduced data retrieval time by 25% by implementing strategic database indexing and query optimization techniques, substantially boosting application performance.</li>
-                    <li>Strengthened data security through the integration of encryption protocols for sensitive information and robust input validation to prevent common vulnerabilities.</li>
-                    <li>Collaborated actively with fellow interns on performance optimization initiatives, participating in rigorous code reviews and contributing to a more scalable and efficient system architecture.</li>
-                    <li>Gained hands-on experience across the full software development lifecycle, from requirements analysis and design to implementation, testing, and debugging within a collaborative team environment.</li>
-                </ul>
+    <section class="py-5">
+        <div class="container">
+            <h2 class="section-title text-center">Professional Experience</h2>
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Languify : Java Internship</h5>
+                    <p class="card-text"><small class="text-muted">December 2022 - February 2023 (3 months)</small></p>
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <span class="timeline-dot"></span>
+                            <p>Developed a robust console-based banking management system, leveraging core Java principles for backend operations and delivering a secure, efficient user experience.</p>
+                        </div>
+                        <div class="timeline-item">
+                            <span class="timeline-dot"></span>
+                            <p>Designed and implemented comprehensive account management functionalities, including user authentication, balance inquiries, and detailed transaction handling (deposits, withdrawals, transfers).</p>
+                        </div>
+                        <div class="timeline-item">
+                            <span class="timeline-dot"></span>
+                            <p>Integrated SQL databases (e.g., MySQL) for persistent data storage, expertly managing customer accounts and transaction records while ensuring data integrity and consistency.</p>
+                        </div>
+                        <div class="timeline-item">
+                            <span class="timeline-dot"></span>
+                            <p>Enhanced system reliability by 40% through meticulous code refactoring, adhering to Object-Oriented Programming (OOP) best practices and significantly improving code maintainability.</p>
+                        </div>
+                        <div class="timeline-item">
+                            <span class="timeline-dot"></span>
+                            <p>Reduced data retrieval time by 25% by implementing strategic database indexing and query optimization techniques, substantially boosting application performance.</p>
+                        </div>
+                        <div class="timeline-item">
+                            <span class="timeline-dot"></span>
+                            <p>Strengthened data security through the integration of encryption protocols for sensitive information and robust input validation to prevent common vulnerabilities.</p>
+                        </div>
+                        <div class="timeline-item">
+                            <span class="timeline-dot"></span>
+                            <p>Collaborated actively with fellow interns on performance optimization initiatives, participating in rigorous code reviews and contributing to a more scalable and efficient system architecture.</p>
+                        </div>
+                        <div class="timeline-item">
+                            <span class="timeline-dot"></span>
+                            <p>Gained hands-on experience across the full software development lifecycle, from requirements analysis and design to implementation, testing, and debugging within a collaborative team environment.</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- Key Projects: Software Engineering -->
-    <section class="projects software">
-        <h2>Key Projects: Software Engineering</h2>
-        <div class="projects-grid">
-            <div class="card">
-                <h3>Jarvis-like AI Assistant</h3>
-                <p>Built an autonomous AI assistant similar to Jarvis, capable of controlling a laptop via voice commands using local LLMs, showcasing advanced AI integration and system automation.</p>
-            </div>
-            <div class="card">
-                <h3>AI Chatbot Development</h3>
-                <p>Engineered an intelligent chatbot utilizing Java and the OpenAI API, featuring advanced natural language processing for dynamic and engaging user interactions.</p>
-            </div>
-            <div class="card">
-                <h3>Student Management System</h3>
-                <p>Developed a comprehensive database-driven system for student records, encompassing features for streamlined registration, efficient attendance tracking, and detailed performance monitoring.</p>
+    <section class="py-5 bg-light">
+        <div class="container">
+            <h2 class="section-title text-center">Key Projects: Software Engineering</h2>
+            <div class="row g-4">
+                <div class="col-md-6">
+                    <div class="card h-100">
+                        <img src="https://via.placeholder.com/300x200?text=AI+Chatbot" alt="AI Chatbot" class="card-img-top">
+                        <div class="card-body">
+                            <h5 class="card-title">AI Chatbot Development</h5>
+                            <p class="card-text">Engineered an intelligent chatbot utilizing Java and the OpenAI API, featuring advanced natural language processing for dynamic and engaging user interactions.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card h-100">
+                        <img src="https://via.placeholder.com/300x200?text=Student+System" alt="Student Management" class="card-img-top">
+                        <div class="card-body">
+                            <h5 class="card-title">Student Management System</h5>
+                            <p class="card-text">Developed a comprehensive database-driven system for student records, encompassing features for streamlined registration, efficient attendance tracking, and detailed performance monitoring.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card h-100">
+                        <img src="https://via.placeholder.com/300x200?text=Jarvis+AI" alt="Jarvis AI" class="card-img-top">
+                        <div class="card-body">
+                            <h5 class="card-title">Jarvis-like AI Assistant</h5>
+                            <p class="card-text">Built an autonomous AI assistant similar to Jarvis, capable of controlling a laptop via voice commands using local LLMs, showcasing advanced AI integration and system automation.</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- Key Projects: Cybersecurity & IoT -->
-    <section class="projects cybersecurity">
-        <h2>Key Projects: Cybersecurity & IoT</h2>
-        <div class="projects-grid">
-            <div class="card">
-                <h3>Cybersecurity Project</h3>
-                <p>Executed comprehensive cybersecurity simulations and vulnerability analyses, performing precise penetration testing using Kali Linux tools like Nmap and Metasploit.</p>
-            </div>
-            <div class="card">
-                <h3>Electricity Theft Detection System</h3>
-                <p>Designed an innovative IoT-based system to proactively detect and prevent electricity theft, implementing real-time GSM module alerts and automatic power cutoff mechanisms.</p>
+    <section class="py-5">
+        <div class="container">
+            <h2 class="section-title text-center">Key Projects: Cybersecurity & IoT</h2>
+            <div class="row g-4">
+                <div class="col-md-6">
+                    <div class="card h-100">
+                        <img src="https://via.placeholder.com/300x200?text=Cybersecurity" alt="Cybersecurity" class="card-img-top">
+                        <div class="card-body">
+                            <h5 class="card-title">Cybersecurity Project</h5>
+                            <p class="card-text">Executed comprehensive cybersecurity simulations and vulnerability analyses, performing precise penetration testing using Kali Linux tools like Nmap and Metasploit.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card h-100">
+                        <img src="https://via.placeholder.com/300x200?text=Electricity+Theft" alt="Electricity Theft" class="card-img-top">
+                        <div class="card-body">
+                            <h5 class="card-title">Electricity Theft Detection System</h5>
+                            <p class="card-text">Designed an innovative IoT-based system to proactively detect and prevent electricity theft, implementing real-time GSM module alerts and automatic power cutoff mechanisms.</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- Education & Certifications -->
-    <section class="education">
-        <h2>Education & Certifications</h2>
-        <div class="education-content">
-            <h3>Education</h3>
-            <div class="education-grid">
-                <div class="card">
-                    <p><strong>01</strong> Sri Venkateswara College of Engineering</p>
-                    <p>Bachelor of Technology - EEE (August 2020 - May 2023)</p>
+    <section class="py-5 bg-light">
+        <div class="container">
+            <h2 class="section-title text-center">Education & Certifications</h2>
+            <div class="row g-4">
+                <div class="col-md-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Education</h5>
+                            <div class="row">
+                                <div class="col-12 mb-3">
+                                    <div class="card h-100">
+                                        <div class="card-body">
+                                            <p class="card-text"><strong>01</strong> Sri Venkateswara College of Engineering</p>
+                                            <p class="card-text">Bachelor of Technology - EEE (August 2020 - May 2023)</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="card h-100">
+                                        <div class="card-body">
+                                            <p class="card-text"><strong>02</strong> Government Polytechnic College</p>
+                                            <p class="card-text">Diploma, EEE (2017 - 2020)</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="card">
-                    <p><strong>02</strong> Government Polytechnic College</p>
-                    <p>Diploma, EEE (2017 - 2020)</p>
+                <div class="col-md-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Certifications</h5>
+                            <div class="row g-2">
+                                <div class="col-4"><div class="card h-100"><div class="card-body">(ISC)2 Certified in Cybersecurity</div></div></div>
+                                <div class="col-4"><div class="card h-100"><div class="card-body">Cisco Certified Network Associate - Training</div></div></div>
+                                <div class="col-4"><div class="card h-100"><div class="card-body">Java Full Stack Development</div></div></div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-            </div>
-            <h3>Certifications</h3>
-            <div class="certifications-grid">
-                <div class="card">(ISC)2 Certified in Cybersecurity</div>
-                <div class="card">Cisco Certified Network Associate - Training</div>
-                <div class="card">Java Full Stack Development</div>
             </div>
         </div>
     </section>
 
     <!-- Top Skills & Expertise -->
-    <section class="skills">
-        <h2>Top Skills & Expertise</h2>
-        <div class="skills-grid">
-            <div class="card">
-                <h3>Software Development</h3>
-                <ul>
-                    <li>Java Full Stack</li>
-                    <li>OOPs</li>
-                    <li>MySQL, JDBC</li>
-                    <li>API Integration</li>
-                </ul>
-            </div>
-            <div class="card">
-                <h3>Cybersecurity</h3>
-                <ul>
-                    <li>Network Security</li>
-                    <li>Junior Pentesting</li>
-                    <li>Kali Linux, Nmap</li>
-                    <li>Vulnerability Analysis</li>
-                </ul>
-            </div>
-            <div class="card">
-                <h3>Cloud & Infrastructure</h3>
-                <ul>
-                    <li>AWS (Learning)</li>
-                    <li>Azure (Learning)</li>
-                    <li>IoT Modules</li>
-                    <li>System Optimization</li>
-                </ul>
-            </div>
-            <div class="card">
-                <h3>Key Concepts</h3>
-                <ul>
-                    <li>Secure Application Design</li>
-                    <li>Data Security & Encryption</li>
-                    <li>Agile Methodology</li>
-                    <li>Modular Code Design</li>
-                </ul>
-            </div>
-        </div>
-    </section>
-
-    <!-- Ready for Your Team -->
-    <section class="ready">
-        <h2>Ready for Your Team</h2>
-        <h3>Open to exciting roles in:</h3>
-        <div class="ready-grid">
-            <div class="card">
-                <h3>Backend Development</h3>
-                <p>Crafting robust, scalable server-side applications.</p>
-            </div>
-            <div class="card">
-                <h3>Cloud Engineering</h3>
-                <p>Designing and deploying resilient cloud infrastructures.</p>
-            </div>
-            <div class="card">
-                <h3>Cybersecurity</h3>
-                <p>Protecting systems through proactive analysis and defense strategies.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Let's Connect -->
-    <section class="connect">
-        <h2>Let's Connect</h2>
-        <p>I am eager to discuss how my unique blend of software engineering and cybersecurity expertise can benefit your organization.</p>
-        <div class="contact-info">
-            <div class="contact-item"><img src="https://image.flaticon.com/icons/svg/1372/1372978.svg" alt="Phone"> Mobile: +91 7013655116</div>
-            <div class="contact-item"><img src="https://image.flaticon.com/icons/svg/3263/3263095.svg" alt="Email"> Email: taahier75@gmail.com</div>
-            <div class="contact-item"><img src="https://image.flaticon.com/icons/svg/174/174857.svg" alt="LinkedIn"> LinkedIn: linkedin.com/in/taahier</div>
-            <div class="contact-item"><img src="https://image.flaticon.com/icons/svg/25/25657.svg" alt="GitHub"> GitHub: github.com/Taahier</div>
-        </div>
-    </section>
-</body>
-</html>
+    <section class="py-5">
+        <div class="container">
+            <h2 class="section-title text-center">Top Skills & Expertise</h2>
+            <div class="row g-4">
+                <div class="col-md-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Software Development</h5>
+                            <ul class="list-unstyled">
+                                <li>Java Full Stack</li>
+                                <li>OOPs</li>
+                                <li>MySQL, JDBC</li>
+                                <li>API Integration</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Cybersecurity</h5>
+                            <ul class="list-unstyled">
+                                <li>Network Security</li>
+                                <li>Junior Pentesting</li>
+                                <li>Kali Linux, Nmap</li>
+                                <li>Vulnerability Analysis</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Cloud & Infrastructure</h5>
+                            <ul class="list-unstyled">
+                                <li>AWS (Learning)</li>
+                                <li>Azure (Learning)</li>
+                                <li>IoT Modules</li>
+                                <li>System Optimization</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Key Concepts</h5>
+                            <ul class="list-unstyled">
+                                <li>Secure Application Design</li>
+                                <li>Data Security & Encryption</li>
+                                <li>Agile Methodology</li>
+                                <li>Modular Code Desig

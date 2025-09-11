@@ -66,6 +66,32 @@ footer, header, hgroup, menu, nav, section {
 
 
 
+#bg-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;    /* behaves like background image */
+  z-index: -2;          /* keep it behind everything */
+  filter: blur(13px);    /* blur the video */
+}
+
+/* Optional dark overlay for readability */
+.video-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.836); /* semi-transparent black */
+  z-index: -1;
+}
+
+
+
+
+
 
 
 	/* Name heading styles */
@@ -1169,7 +1195,7 @@ input, select, textarea {
 			-webkit-transition-delay: 0.75s;
 			-ms-transition-delay: 0.75s;
 			transition-delay: 0.75s;
-			background-image: linear-gradient(to top, rgba(19, 21, 25, 0.5), rgba(19, 21, 25, 0.5)), url("../../images/overlay.png");
+			/*background-image: linear-gradient(to top, rgba(19, 21, 25, 0.5), rgba(19, 21, 25, 0.5)), url("../../images/overlay.png"); */
 			background-size: auto, 256px 256px;
 			background-position: center, center;
 			background-repeat: no-repeat, repeat;
@@ -1185,7 +1211,7 @@ input, select, textarea {
 			-webkit-transition: -webkit-transform 0.325s ease-in-out, -webkit-filter 0.325s ease-in-out;
 			-ms-transition: -ms-transform 0.325s ease-in-out, -ms-filter 0.325s ease-in-out;
 			transition: transform 0.325s ease-in-out, filter 0.325s ease-in-out;
-			background-image: url("../../images/2.jpg");
+			/*background-image: url("../../images/2.jpg"); */
 			background-position: center;
 			background-size: cover;
 			background-repeat: no-repeat;

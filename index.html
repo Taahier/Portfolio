@@ -460,5 +460,87 @@
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
 
+
+
+
+			<!-- mouse trail start -->
+
+
+
+	<!-- glowing cursor -->
+<style>
+  body {
+    cursor: none; /* hide default cursor */
+  }
+
+  .cursor-glow {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 28px;  /* cursor size */
+    height: 28px;
+    border-radius: 50%;
+    pointer-events: none;
+    transform: translate(-50%, -50%) scale(1);
+    z-index: 10000;
+    background: radial-gradient(circle at 30% 30%,
+                rgba(247,210,143,0.95) 0%,
+                rgba(247,210,143,0.45) 30%,
+                rgba(247,210,143,0.1) 60%,
+                rgba(247,210,143,0) 80%);
+    filter: blur(8px);
+    transition: transform 100ms linear, opacity 200ms linear;
+    mix-blend-mode: screen;
+    will-change: transform, left, top, opacity;
+  }
+
+  @media (max-width: 600px) {
+    .cursor-glow { display: none; }
+    body { cursor: auto; } /* restore normal cursor on mobile */
+  }
+</style>
+
+<script>
+(function () {
+  if ('ontouchstart' in window) return; // disable on mobile
+
+  const glow = document.createElement('div');
+  glow.className = 'cursor-glow';
+  document.body.appendChild(glow);
+
+  let lastMove = performance.now();
+
+  document.addEventListener('mousemove', (e) => {
+    glow.style.left = e.clientX + 'px';
+    glow.style.top = e.clientY + 'px';
+    glow.style.opacity = 1;
+    glow.style.transform = 'translate(-50%, -50%) scale(1)';
+    lastMove = performance.now();
+  });
+
+  window.addEventListener('mouseleave', () => glow.style.opacity = 0);
+  window.addEventListener('mouseenter', () => glow.style.opacity = 1);
+
+  function idleCheck() {
+    const now = performance.now();
+    if (now - lastMove > 120) {
+      glow.style.transform = 'translate(-50%, -50%) scale(0.85)';
+    }
+    if (now - lastMove > 2000) {
+      glow.style.opacity = 0;
+    }
+    requestAnimationFrame(idleCheck);
+  }
+  idleCheck();
+})();
+</script>
+
+
+
+<!-- mouse trail end -->
+
+
+		
+
 	</body>
 </html>
